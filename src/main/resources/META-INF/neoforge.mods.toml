@@ -1,0 +1,61 @@
+# NeoForge 1.21.1（21.1.x）必须显式声明 modLoader / loaderVersion；license 必填。
+# 本文件里的美元号加花括号占位符由 build.gradle 的 processResources 在构建时用 gradle.properties 展开。
+# 注意：不要在注释或字符串里写“美元号+花括号+省略号”这类示例文字——Groovy 模板会把它当表达式求值而构建失败。
+modLoader="javafml"
+loaderVersion="[1,)"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''
+${mod_description}
+
+所有者 / Owner: lyhyy2007
+程序提供 / Program provider: deepseek
+'''
+
+# ---------------------------------------------------------------------------
+# 依赖声明
+#   * neoforge / minecraft：必需
+#   * cloth_config：可选。它只提供客户端配置界面；缺失时模组功能完全正常，
+#     故 type="optional" + side="CLIENT"（专用服务器不需要装它）。
+#   * configured：可选。它读取我们使用的 NeoForge 配置系统（ModConfigSpec），
+#     自动生成游戏内菜单；缺失时不影响命令拦截。
+# ---------------------------------------------------------------------------
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="cloth_config"
+type="optional"
+versionRange="[15,)"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.${mod_id}]]
+modId="configured"
+type="optional"
+versionRange="*"
+ordering="AFTER"
+side="BOTH"
+
+# ---------------------------------------------------------------------------
+# Configured 支持用 [modproperties.<modId>] 给单个模组的配置界面换背景。
+# 键名随 Configured 版本变化，请对照所用版本的说明再启用下面两行。
+# ---------------------------------------------------------------------------
+# [modproperties.command_control]
+# configured:background="minecraft:textures/block/stone.png"

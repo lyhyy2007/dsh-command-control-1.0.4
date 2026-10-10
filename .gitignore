@@ -1,0 +1,35 @@
+# ---- Gradle / 构建产物 ----
+.gradle/
+build/
+!build/libs/
+!build/libs/*.jar
+run/
+out/
+bin/
+*.hprof
+
+# ---- IDE ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+nbproject/
+
+# ---- 操作系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.bak
+
+# ---- 日志与本地文件 ----
+*.log
+logs/
+run/
+eula.txt
+local.properties
