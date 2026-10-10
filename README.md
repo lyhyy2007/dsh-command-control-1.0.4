@@ -1,12 +1,13 @@
-# Command Control —— Minecraft 1.21.1 / NeoForge 命令守卫
+# Command Control —— Minecraft 1.21.1 / NeoForge 命令控制
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green.svg)](https://www.minecraft.net/)
 [![NeoForge](https://img.shields.io/badge/NeoForge-21.1.x-orange.svg)](https://neoforged.net/)
 [![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)](CHANGELOG.md)
 
-自定义禁用或启用命令
-在配置界面中还能顺手把 **F3+F4 切换游戏模式**关掉。
+自定义禁用或启用命令，在配置界面中顺手把 F3+F4 切换游戏模式关掉。
+非专用服务器可通过 Cloth Config 配置。
+在配置界面中顺手把 **F3+F4 切换游戏模式**关掉了。
 
 * 所有者 / Owner：**lyhyy2007**　程序提供 / Program provider：**deepseek**　许可证：[MIT](LICENSE)
 * 环境：Minecraft **1.21.1** + NeoForge **21.1.x**（任意 21.1 小版本）+ Java 21
